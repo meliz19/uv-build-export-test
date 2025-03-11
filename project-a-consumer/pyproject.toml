@@ -8,9 +8,14 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
-    "project-a>=1.0",
+    "click>=8.1.8",
+    "project-a",
+    "toml>=0.10.2",
 ]
 
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.uv.sources]
+project-a = { path = "../project-a", editable = true }
